@@ -1,0 +1,54 @@
+<meta charter="utf8">
+
+<script>
+    
+function sum(a, b) {
+    var result = 0;
+    result = a + b;
+    return result;
+}
+
+function subtract(a, b) {
+    var result = 0;
+    result = a - b;
+    return result;
+}
+
+function multiply(a, b) {
+    var result = 0;
+    result = a * b;
+    return result;
+}
+
+function divide(a, b) {
+    var result = 0;
+    result = a / b;
+    return result;
+}
+
+let a = parseInt(prompt('Назовите первое число'));
+let b = parseInt(prompt('Назовите второе число'));
+let operation = prompt('Какое арифметическое действие вы хотели бы применить? (1 -сложение, 2 - вычитание, 3 - умножение, 4 - деление');
+
+function mathOperation(a, b, operation) {  
+    var result = 0;   
+    switch (operation) {
+        case '1': 
+        result = sum(a, b);
+            break;
+        case '2':
+        result = subtract(a, b);
+            break;
+        case '3':
+        result = multiply(a, b);
+            break;
+        case '4':
+        result = divide(a, b);
+            break;
+        default:
+        return new Error(`undefined operation ${operation}`); 
+    }
+    return result;
+}
+alert(mathOperation(a, b, operation));
+</script>

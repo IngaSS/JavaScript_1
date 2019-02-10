@@ -1,0 +1,42 @@
+<!-- Написать функцию для проверки пароля. На вход должен подаваться аргумент path
+– строка с паролем. Требования к паролю:
+• длина должна быть не меньше 3-х символов и не больше 12;
+• пароль должен содержать хотя бы один из следующих символов: &, $, %, *;
+• пароль должен либо начинаться с буквы ‘q’, либо заканчиваться буквой ‘z’, либо
+оба условия сразу.
+На выходе функция должна возвращать строку «Корректный пароль» в том случае,
+если пароль удовлетворяет всем условиям, и строку «Некорректный пароль» в том
+случае, если пароль не удовлетворяет условиям.
+Для реализации проверки условий необходимо использовать следующие
+встроенные инструменты: -->
+
+<meta charter="utf8">
+<script>
+
+    let path = prompt('Введите пароль');
+
+    function suitTheLenght(path) {
+        return (path.length >= 3 && path.length <= 12);
+    }
+
+    function suitTheSymbol(path) {
+        return (path.includes('&') || path.includes('$') || path.includes('%') || path.includes('*'));
+    }
+
+    function suitBeginningAndEnd(path) {
+        return (path.startsWith('q') || path.endsWith('z'));
+    }
+
+
+    function checkPassword(path) {
+        if (suitTheLenght(path) && suitTheSymbol(path) && suitBeginningAndEnd(path)) {
+            alert('Пароль корректный');
+        } else {
+            alert('Пароль некорректный');
+        }
+    }
+    checkPassword(path);
+
+
+
+</script>
