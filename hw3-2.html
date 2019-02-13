@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+    let basket = [
+        { name: 'стул', price: 1200, amount: 4 },
+        { name: 'стол', price: 5000, amount: 1 },
+        { name: 'кресло', price: 4000, amount: 2 }
+    ]
+
+    function countBasketPrice(basket) {
+        var priceSum = 0;
+        for (i in basket) {
+            let finalPrice = basket[i].price * basket[i].amount;
+            priceSum += finalPrice;
+        }
+        console.log(priceSum);
+    }
+
+    countBasketPrice(basket);
+
+
+</script>
