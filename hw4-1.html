@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+        function countNum() {
+            let number = prompt('Назовите число от 0 до 999');
+
+            let arrNum = number.split('').reverse();
+
+            let obj = {
+                'сотни': arrNum[2],
+                'десятки': arrNum[1],
+                'единицы': arrNum[0]
+            }
+            
+            if (arrNum.length <= 3) {
+                return obj;
+            } else {
+                return ('Число больше 999 :(');
+            }
+        }
+
+        console.log(countNum());
+    
+
+</script>
