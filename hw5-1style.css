@@ -1,0 +1,36 @@
+html {
+    background: lightgrey;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+tbody tr:nth-child(2n + 1) td:nth-child(2n) {
+    background: black;
+}
+
+tbody tr:nth-child(2n) td:nth-child(2n+1) {
+    background: black;
+}
+
+.with_letters > td {
+    background-color: transparent !important;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: none;
+}
+
+.with_numbers {
+    background-color: transparent !important;
+    border: none;
+    text-align: center;
+}
+
